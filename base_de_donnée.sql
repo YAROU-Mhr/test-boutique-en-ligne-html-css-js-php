@@ -43,3 +43,10 @@ CREATE TABLE utilisateur (
     mdp VARCHAR(255),
     profil VARCHAR(50)
 );
+
+
+-- Insertion de l'utilisateur administrateur
+INSERT INTO Utilisateur (email, mdp, profil) VALUES ('admin@gmail.com', '12345678', 'Admin');
+
+-- Insertion de l'utilisateur client
+INSERT INTO Utilisateur (email, mdp, profil) VALUES ('user@gmail.com', '12345678', 'Client');
