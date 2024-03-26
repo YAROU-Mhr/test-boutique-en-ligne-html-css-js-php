@@ -17,14 +17,14 @@
                     <li>Lorem ipsum dolor sit a!</li>
                 </ul>
             </div>
-            <form method="POST">
+            <form method="POST" action="php/login.php">
                 <div class="input-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email">
+                    <input type="email" id="email" name="email" required>
                 </div>
                 <div class="input-group">
                     <label for="mdp">Mot de passe</label>
-                    <input type="password" id="mdp">
+                    <input type="password" id="mdp" name="mdp" required>
                 </div>
 
                 <div class="input-group btn">
