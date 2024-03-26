@@ -1,0 +1,110 @@
+:root {
+    --border-color: #CFFFD7;
+    --background-color: #fff;
+    --background-color-1: #06A3DA;
+    --background-color-2: #34AD54;
+    --background-color-3: #2299dd;
+    --background-color-4: #FC836D;
+    --background-color-5: #fc836d5b;
+    --background-color-6: rgba(252, 131, 109, 0.9);
+    --text-color: #fff;
+    --text-color-2: #000;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    outline: none;
+}
+
+
+nav{
+    height: 50px;
+    background: var(--background-color-5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+ul{
+    display: flex;
+    list-style: none;
+}
+
+li{
+    padding: 0 20px;
+}
+
+a{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-color-2);
+}
+
+.container {
+    height: 80vmin;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px;
+}
+.box-produit{
+    height: 100%;
+    width: 80%;
+}
+.new{
+    float: left;
+    width: 80%;
+    margin-bottom: 1.5rem;
+    padding: 0 10px;
+}
+
+.new a {
+    background: var(--background-color-1);
+    padding: 5px 10px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+table{
+    width: 100%;
+    /* border: 1px solid #000; */
+    border-collapse: collapse;
+    font-size: 1.2rem;
+}
+
+thead{
+    background-color: #06A3DA;
+    color: #ccc;
+
+}
+
+
+th, td{
+    border: 1px solid #000;
+    color: #ccc;
+    padding: 10px;
+}
+
+.action{
+    display: flex;
+    justify-content: space-around;
+}
+
+.modifier{
+    background: var(--background-color-1);
+    padding: 5px 10px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.supprimer{
+    background: red;
+    padding: 5px 10px;
+    color: var(--text-color);
+    text-decoration: none;
+}

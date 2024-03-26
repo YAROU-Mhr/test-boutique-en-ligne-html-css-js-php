@@ -10,7 +10,7 @@ if ($stmt->rowCount() > 0) {
     $result  = $stmt->fetch();
     if ($result['profil'] === "Admin") {
         echo "<script>alert('Admin')</script>";
-        header("refresh:0.5; url=../index.php");
+        header("refresh:0.5; url=../produits.php");
     } else {
         echo "<script>alert('Client')</script>";
         header("refresh:0.5; url=../index.php");
