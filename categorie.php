@@ -22,9 +22,9 @@ $all_categorie = $stmt->fetchAll();
     <section>
         <nav>
             <ul>
-                <li><a href="produits.php">Produit</a></li>
+            <li><a href="produits.php">Produit</a></li>
                 <li><a href="categorie.php">Categorie</a></li>
-                <li><a href="#">Commande</a></li>
+                <li><a href="commande.php">Commande</a></li>
                 <li><a href="#">Client</a></li>
             </ul>
         </nav>
