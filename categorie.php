@@ -1,10 +1,10 @@
 <?php
 require 'php/bdd.php';
 
-$req = "SELECT * FROM produit ";
+$req = "SELECT * FROM categorie ";
 $stmt = $bdd->prepare($req);
 $stmt->execute();
-$all_product = $stmt->fetchAll();
+$all_categorie = $stmt->fetchAll();
 
 ?>
 
@@ -14,7 +14,7 @@ $all_product = $stmt->fetchAll();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produit</title>
+    <title>Categorire</title>
     <link rel="stylesheet" href="assets/style2.css">
 </head>
 
@@ -30,29 +30,24 @@ $all_product = $stmt->fetchAll();
         </nav>
     </section>
     <section class="container">
-        <div class="new">
-            <a href="form_ajouter_produit.php">Nouveau</a>
-        </div>
         <div class="box-produit">
             <table>
                 <thead>
                     <tr>
-                        <th>REF</th>
-                        <th>DESIGN</th>
-                        <th>PU</th>
+                        <th>Code</th>
+                        <th>Libelle</th>
                         <th>ACTIONS</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($all_product as $product) {  ?>
+                    <?php foreach ($all_categorie as $categorie) {  ?>
                         <tr>
-                            <td><?= $product['ref'] ?></td>
-                            <td><?= $product['design'] ?></td>
-                            <td><?= $product['pu'] ?></td>
+                            <td><?= $categorie['code'] ?></td>
+                            <td><?= $categorie['libelle'] ?></td>
                             <td>
                                 <div class="action">
-                                    <a href="form_modifier_produit.php?ref_prod=<?= $product['ref'] ?>" class="modifier">Modifier</a>
-                                    <a href="php/trt_supprimer_produit.php?ref_prod=<?= $product['ref'] ?>" class="supprimer">Supprimer</a>
+                                    <a href="form_modifier_categorie.php?ref_cat=<?= $categorie['code'] ?>" class="modifier">Modifier</a>
+                                    <a href="php/trt_supprimer_categorie.php?ref_cat=<?= $categorie['code'] ?>" class="supprimer">Supprimer</a>
                                 </div>
                             </td>
                         </tr>
