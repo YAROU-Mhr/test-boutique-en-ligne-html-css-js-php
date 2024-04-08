@@ -38,7 +38,7 @@ if (!$cat) {
                     <input type="text" id="libelle" name="libelle" required value="<?= $cat['libelle'] ?>">
                 </div>
                 <div class="input-group btn">
-                    <button type="submit">Valider l'ajout</button>
+                    <button type="submit">Valider la modification</button>
                 </div>
             </form>
         </div>

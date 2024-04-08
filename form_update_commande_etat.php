@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <input type="text" id="etat" name="etat" required value="<?= $commande['etat'] ?>">
                 </div>
                 <div class="input-group btn">
-                    <button type="submit">Valider l'ajout</button>
+                    <button type="submit">Valider la modification</button>
                 </div>
             </form>
         </div>

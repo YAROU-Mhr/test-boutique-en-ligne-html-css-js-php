@@ -11,12 +11,7 @@
 <body>
     <section class="container">
         <div class="box">
-            <div class="message">
-                <ul>
-                    <li>Lorem ipsum dolor sit a!Lorem ipsum dolor sit a!</li>
-                    <li>Lorem ipsum dolor sit a!</li>
-                </ul>
-            </div>
+             
             <form method="POST" action="php/login.php">
                 <div class="input-group">
                     <label for="email">Email</label>

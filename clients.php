@@ -1,10 +1,10 @@
 <?php
 require 'php/bdd.php';
 
-$req = "SELECT * FROM commande ";
+$req = "SELECT * FROM client ";
 $stmt = $bdd->prepare($req);
 $stmt->execute();
-$all_commande = $stmt->fetchAll();
+$all_client = $stmt->fetchAll();
 
 ?>
 
@@ -14,7 +14,7 @@ $all_commande = $stmt->fetchAll();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Commande</title>
+    <title>Client</title>
     <link rel="stylesheet" href="assets/style2.css">
 </head>
 
@@ -29,27 +29,27 @@ $all_commande = $stmt->fetchAll();
             <table>
                 <thead>
                     <tr>
-                        <th>Num</th>
-                        <th>Date</th>
-                        <th>Etat</th>
-                        <th>Quantité</th>
                         <th>numcli</th>
-                        <th>ref</th>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Adresse</th>
+                        <th>Telephone</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($all_commande as $commande) {  ?>
+                    <?php foreach ($all_client as $client) {  ?>
                         <tr>
-                            <td><?= $commande['numcmd'] ?></td>
-                            <td><?= $commande['date'] ?></td>
-                            <td><?= $commande['etat'] ?></td>
-                            <td><?= $commande['qte'] ?></td>
-                            <td><?= $commande['numcli'] ?></td>
-                            <td><?= $commande['ref'] ?></td>
+                            <td><?= $client['numcli'] ?></td>
+                            <td><?= $client['nom'] ?></td>
+                            <td><?= $client['prenom'] ?></td>
+                            <td><?= $client['adresse'] ?></td>
+                            <td><?= $client['telephone'] ?></td>
                             <td>
                                 <div class="action">
-                                    <a href="form_update_commande_etat.php?ref_numcmd=<?= $commande['numcmd'] ?>" class="supprimer">Modifier etat</a>
+                                    <a href="form_update_client.php?ref_numcli=<?= $client['numcli'] ?>" class="modifier">Modifier</a>
+
+                                    <a href="php/trt_supprimer_client.php?ref_numcli=<?= $client['numcli'] ?>" class="supprimer ">Supprimer</a>
                                 </div>
                             </td>
                         </tr>

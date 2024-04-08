@@ -20,13 +20,9 @@ $all_product = $stmt->fetchAll();
 
 <body>
     <section>
-        <nav>
-            <ul>
-                <li><a href="produits.php">Produit</a></li>
-                <li><a href="categorie.php">Categorie</a></li>
-                <li><a href="commande.php">Commande</a></li>
-            </ul>
-        </nav>
+        <?php
+            require 'include/nav.php'
+        ?>
     </section>
     <section class="container">
         <div class="new">
