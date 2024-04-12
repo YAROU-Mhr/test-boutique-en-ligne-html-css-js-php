@@ -9,7 +9,7 @@ $client = $stmt_cat_modif->fetch();
 
 if (!$client) {
     echo "<script>alert(client non retrouvé.')</script>";
-    header("refresh:10; url=../clients.php");
+    header("refresh:1; url=../clients.php");
     exit();
 }
 
@@ -26,7 +26,7 @@ if (!$client) {
 </head>
 
 <body>
-    <section class="container " style="height: auto !important;">
+    <section class="container" style="height: auto !important;">
         <div class="box">
             <form action="php/trt_modifier_client.php" method="POST" enctype="multipart/form-data">
                 <div class="input-group">
